@@ -1,0 +1,6 @@
+INDEX VERSION 1.127+/Users/hgurram/Documents/Personal/Coursera/Certifications/Scala/Assignments/.metadata/.plugins/org.eclipse.jdt.core
+1563338810.index
+4135313619.index
+2067728543.index
+736068086.index
+99932591.index

@@ -1,0 +1,619 @@
+2016-07-24 11:51:23,186 ERROR [main] - Statistics - Statistics file `/Users/hgurram/.scalaide/statistics` is corrupted. A new one is being created. Corrupted content was:
+
+com.cedarsoftware.util.io.JsonIoException: error parsing JSON value
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:529)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:289)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:262)
+	at org.scalaide.core.internal.statistics.Statistics.org$scalaide$core$internal$statistics$Statistics$$read(Statistics.scala:74)
+	at org.scalaide.core.internal.statistics.Statistics$$anonfun$readStats$1.apply(Statistics.scala:52)
+	at org.scalaide.core.internal.statistics.Statistics$$anonfun$readStats$1.apply(Statistics.scala:51)
+	at org.scalaide.core.ScalaIdeDataStore$$anonfun$validate$2.apply(ScalaIdeDataStore.scala:59)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:210)
+	at org.scalaide.core.ScalaIdeDataStore$.validate(ScalaIdeDataStore.scala:58)
+	at org.scalaide.core.internal.statistics.Statistics.readStats(Statistics.scala:51)
+	at org.scalaide.core.internal.statistics.Statistics.<init>(Statistics.scala:30)
+	at org.scalaide.core.internal.ScalaPlugin.stats$lzycompute(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.stats(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.statistics(ScalaPlugin.scala:138)
+	at org.scalaide.core.internal.ScalaPlugin.start(ScalaPlugin.scala:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.registry.PerspectiveDescriptor.createFactory(PerspectiveDescriptor.java:74)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:4032)
+	at org.eclipse.ui.internal.WorkbenchWindow.setup(WorkbenchWindow.java:733)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:85)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.inject(ContextInjectionFactory.java:73)
+	at org.eclipse.ui.internal.Workbench.createWorkbenchWindow(Workbench.java:1480)
+	at org.eclipse.ui.internal.Workbench.getActiveWorkbenchWindow(Workbench.java:1453)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.updateActiveShell(WorkbenchSourceProvider.java:943)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.getCurrentState(WorkbenchSourceProvider.java:137)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider$6.handleEvent(WorkbenchSourceProvider.java:703)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1098)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4195)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1471)
+	at org.eclipse.swt.widgets.Shell.windowDidBecomeKey(Shell.java:2159)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5686)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Widget.callSuper(Widget.java:214)
+	at org.eclipse.swt.widgets.Widget.becomeKeyWindow(Widget.java:366)
+	at org.eclipse.swt.widgets.Shell.becomeKeyWindow(Shell.java:525)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5510)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSWindow.makeKeyAndOrderFront(NSWindow.java:202)
+	at org.eclipse.swt.widgets.Shell.makeKeyAndOrderFront(Shell.java:1291)
+	at org.eclipse.swt.widgets.Shell.setWindowVisible(Shell.java:1972)
+	at org.eclipse.swt.widgets.Shell.open(Shell.java:1349)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.postProcess(WBWRenderer.java:744)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1074)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: com.cedarsoftware.util.io.JsonIoException: EOF reached prematurely
+	at com.cedarsoftware.util.io.JsonParser.error(JsonParser.java:584)
+	at com.cedarsoftware.util.io.JsonParser.readValue(JsonParser.java:278)
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:521)
+	... 103 more
+2016-07-24 11:52:25,497  WARN [ModalContext] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:52:25,499  WARN [ModalContext] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:52:25,896  WARN [Worker-0] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:52:25,896  WARN [Worker-0] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:52:49,959  WARN [main] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:52:49,959  WARN [main] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:53:20,035  WARN [main] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:53:20,036  WARN [main] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:53:20,357  WARN [Worker-0] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:53:20,358  WARN [Worker-0] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:54:06,360  WARN [Worker-0] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:54:06,360  WARN [Worker-0] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:54:10,778 ERROR [Worker-6] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2016-07-24 11:54:10,778 ERROR [Worker-6] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2016-07-24 11:54:10,778 ERROR [Worker-6] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2016-07-24 11:54:59,300  WARN [Worker-5] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:54:59,301  WARN [Worker-5] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:55:01,125  WARN [Worker-4] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:55:01,125  WARN [Worker-4] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:55:54,259  WARN [Worker-1] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:55:54,260  WARN [Worker-1] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:55:54,348 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error during instrumentation of ScriptCompilationUnit(L/Helloworld/src/greeter/SampleWorksheet.sc)
+org.scalaide.worksheet.runtime.MissingTopLevelObjectDeclaration: Couldn't find top level object declaration in source SampleWorksheet.sc
+	at org.scalaide.worksheet.runtime.SourceInstrumenter.instrumentProgram(SourceInstrumenter.scala:37)
+	at org.scalaide.worksheet.runtime.SourceInstrumenter.instrument(SourceInstrumenter.scala:24)
+	at org.scalaide.worksheet.runtime.WorksheetRunner$$anonfun$receive$1.applyOrElse(WorksheetRunner.scala:73)
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:465)
+	at org.scalaide.worksheet.runtime.WorksheetRunner.aroundReceive(WorksheetRunner.scala:44)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:254)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:221)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:231)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2016-07-24 11:56:02,572  WARN [Worker-6] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:56:02,572  WARN [Worker-6] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:56:22,993  WARN [Worker-3] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:56:22,994  WARN [Worker-3] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:57:40,959  WARN [Worker-8] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:57:40,960  WARN [Worker-8] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 11:57:42,061  WARN [Worker-0] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 11:57:42,062  WARN [Worker-0] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:35:44,019  WARN [Worker-13] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:35:44,020  WARN [Worker-13] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:36:02,272  WARN [Worker-12] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:36:02,272  WARN [Worker-12] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:36:45,878 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 12:36:45,879 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 12:36:45,879 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 12:37:25,677  WARN [Worker-15] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:37:25,677  WARN [Worker-15] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:37:26,736  WARN [Worker-15] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:37:26,736  WARN [Worker-15] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:37:49,196  WARN [Worker-13] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:37:49,196  WARN [Worker-13] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:37:50,221  WARN [Worker-14] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:37:50,222  WARN [Worker-14] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:37:56,281  WARN [Worker-16] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:37:56,281  WARN [Worker-16] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:37:57,306  WARN [Worker-14] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:37:57,306  WARN [Worker-14] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:38:04,815  WARN [Worker-15] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:38:04,816  WARN [Worker-15] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:38:05,840  WARN [Worker-9] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:38:05,841  WARN [Worker-9] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:38:50,943  WARN [Worker-9] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:38:50,943  WARN [Worker-9] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:38:51,964  WARN [Worker-9] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:38:51,964  WARN [Worker-9] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:38:55,900  WARN [Worker-15] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:38:55,900  WARN [Worker-15] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:38:56,925  WARN [Worker-17] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:38:56,926  WARN [Worker-17] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:39:45,105  WARN [Worker-9] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:39:45,105  WARN [Worker-9] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:39:46,133  WARN [Worker-13] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:39:46,134  WARN [Worker-13] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:39:54,476  WARN [Worker-9] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:39:54,476  WARN [Worker-9] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:39:55,497  WARN [Worker-9] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:39:55,497  WARN [Worker-9] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:40:01,077  WARN [Worker-15] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:40:01,077  WARN [Worker-15] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:40:04,165  WARN [Worker-10] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:40:04,165  WARN [Worker-10] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:40:05,189  WARN [Worker-9] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:40:05,189  WARN [Worker-9] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:40:19,606  WARN [Worker-17] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:40:19,606  WARN [Worker-17] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 12:40:20,627  WARN [Worker-16] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 12:40:20,627  WARN [Worker-16] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:42:13,564  WARN [Worker-33] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:42:13,569  WARN [Worker-33] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:42:14,813  WARN [Worker-40] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:42:14,813  WARN [Worker-40] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:42:43,329  WARN [Worker-39] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:42:43,329  WARN [Worker-39] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:42:45,018  WARN [Worker-41] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:42:45,018  WARN [Worker-41] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:43:39,780  WARN [Worker-40] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:43:39,780  WARN [Worker-40] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:43:40,962  WARN [Worker-38] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:43:40,962  WARN [Worker-38] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:47:16,098  WARN [Worker-44] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:47:16,098  WARN [Worker-44] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:47:17,135  WARN [Worker-43] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:47:17,135  WARN [Worker-43] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:47:35,858  WARN [Worker-44] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:47:35,858  WARN [Worker-44] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:47:36,878  WARN [Worker-44] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:47:36,878  WARN [Worker-44] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:48:00,669  WARN [Worker-44] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:48:00,669  WARN [Worker-44] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:48:01,688  WARN [Worker-42] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:48:01,688  WARN [Worker-42] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:48:13,914  WARN [Worker-45] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:48:13,914  WARN [Worker-45] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 14:48:14,938  WARN [Worker-43] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 14:48:14,938  WARN [Worker-43] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 15:42:35,617  WARN [Worker-51] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 15:42:35,617  WARN [Worker-51] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 15:42:36,634  WARN [Worker-55] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 15:42:36,634  WARN [Worker-55] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 15:42:40,621  WARN [Worker-51] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 15:42:40,621  WARN [Worker-51] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 15:42:41,636  WARN [Worker-55] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 15:42:41,637  WARN [Worker-55] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 15:42:56,009  WARN [Worker-55] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 15:42:56,009  WARN [Worker-55] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 15:42:57,027  WARN [Worker-51] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 15:42:57,027  WARN [Worker-51] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:07:38,474  WARN [Worker-60] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 16:07:38,474  WARN [Worker-60] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:07:38,573  WARN [Worker-60] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 16:07:38,573  WARN [Worker-60] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:07:40,057  WARN [Java indexing] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 16:07:40,057  WARN [Java indexing] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:08:02,582  WARN [Worker-62] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 16:08:02,582  WARN [Worker-62] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:08:02,634  WARN [Worker-62] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 16:08:02,634  WARN [Worker-62] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:08:04,153  WARN [Java indexing] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 16:08:04,153  WARN [Java indexing] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:08:27,042 ERROR [main] - Statistics - Statistics file `/Users/hgurram/.scalaide/statistics` is corrupted. A new one is being created. Corrupted content was:
+
+com.cedarsoftware.util.io.JsonIoException: error parsing JSON value
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:529)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:289)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:262)
+	at org.scalaide.core.internal.statistics.Statistics.org$scalaide$core$internal$statistics$Statistics$$read(Statistics.scala:74)
+	at org.scalaide.core.internal.statistics.Statistics$$anonfun$readStats$1.apply(Statistics.scala:52)
+	at org.scalaide.core.internal.statistics.Statistics$$anonfun$readStats$1.apply(Statistics.scala:51)
+	at org.scalaide.core.ScalaIdeDataStore$$anonfun$validate$2.apply(ScalaIdeDataStore.scala:59)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:214)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:210)
+	at org.scalaide.core.ScalaIdeDataStore$.validate(ScalaIdeDataStore.scala:58)
+	at org.scalaide.core.internal.statistics.Statistics.readStats(Statistics.scala:51)
+	at org.scalaide.core.internal.statistics.Statistics.<init>(Statistics.scala:30)
+	at org.scalaide.core.internal.ScalaPlugin.stats$lzycompute(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.stats(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.statistics(ScalaPlugin.scala:138)
+	at org.scalaide.core.internal.ScalaPlugin.start(ScalaPlugin.scala:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.ui.filters.FilterDescriptor$1.run(FilterDescriptor.java:132)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.filters.FilterDescriptor.createViewerFilter(FilterDescriptor.java:136)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup$FilterItem.getFilterInstance(CustomFiltersActionGroup.java:187)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.updateViewerFilters(CustomFiltersActionGroup.java:516)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.<init>(CustomFiltersActionGroup.java:275)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.<init>(CustomFiltersActionGroup.java:241)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.<init>(PackageExplorerActionGroup.java:148)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart.makeActions(PackageExplorerPart.java:804)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart.createPartControl(PackageExplorerPart.java:505)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:141)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityView.createPartControl(CompatibilityView.java:155)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:327)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$6.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:69)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1246)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:103)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:678)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:185)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:674)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1078)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: com.cedarsoftware.util.io.JsonIoException: EOF reached prematurely
+	at com.cedarsoftware.util.io.JsonParser.error(JsonParser.java:584)
+	at com.cedarsoftware.util.io.JsonParser.readValue(JsonParser.java:278)
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:521)
+	... 151 more
+2016-07-24 16:08:28,062  WARN [Worker-4] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-24 16:08:28,064  WARN [Worker-4] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-24 16:19:09,846 ERROR [main] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2016-07-24 16:19:09,848 ERROR [main] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2016-07-24 16:19:09,848 ERROR [main] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2016-07-24 16:32:55,543  WARN [ModalContext] - ScalaProject - Project progfun1-funsets has platform default sourceLevel.
+2016-07-24 16:32:55,545  WARN [ModalContext] - ScalaProject - Project progfun1-funsets runs on platform default installation.
+2016-07-24 16:32:55,798  WARN [ModalContext] - ScalaProject - Project progfun1-funsets has platform default sourceLevel.
+2016-07-24 16:32:55,798  WARN [ModalContext] - ScalaProject - Project progfun1-funsets runs on platform default installation.
+2016-07-24 16:32:56,006  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for progfun1-funsets, setting default to 2.11.
+2016-07-24 16:32:56,007  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.installation was uninitialized for progfun1-funsets, setting default to 2.11.
+2016-07-24 16:48:48,637  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1141
+2016-07-24 17:04:29,187  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1508
+2016-07-24 17:12:03,202  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1964
+2016-07-24 17:32:39,343 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+scala.reflect.internal.FatalError: ThisType(value <local FunSetSuite>) for sym which is not a class
+	at scala.reflect.internal.Reporting$class.abort(Reporting.scala:59)
+	at scala.reflect.internal.SymbolTable.abort(SymbolTable.scala:16)
+	at scala.reflect.internal.Types$ThisType.<init>(Types.scala:1167)
+	at scala.reflect.internal.Types$UniqueThisType.<init>(Types.scala:1187)
+	at scala.reflect.internal.Types$ThisType$.apply(Types.scala:1191)
+	at scala.tools.nsc.interactive.Global.scala$tools$nsc$interactive$Global$$findMirrorSymbol(Global.scala:875)
+	at scala.tools.nsc.interactive.Global$$anonfun$getDocComment$2$$anonfun$apply$16$$anonfun$apply$18.apply(Global.scala:948)
+	at scala.tools.nsc.interactive.Global$$anonfun$getDocComment$2$$anonfun$apply$16$$anonfun$apply$18.apply(Global.scala:947)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.tools.nsc.interactive.Global$$anonfun$getDocComment$2$$anonfun$apply$16.apply(Global.scala:947)
+	at scala.tools.nsc.interactive.Global$$anonfun$getDocComment$2$$anonfun$apply$16.apply(Global.scala:946)
+	at scala.tools.nsc.interactive.Global.scala$tools$nsc$interactive$Global$$withTempUnits(Global.scala:855)
+	at scala.tools.nsc.interactive.Global$$anonfun$getDocComment$2.apply(Global.scala:946)
+	at scala.tools.nsc.interactive.Global$$anonfun$getDocComment$2.apply(Global.scala:946)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:708)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:945)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:506)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:431)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+2016-07-24 17:45:12,584 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:45:12,585 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:45:12,585 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:45:51,782  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 3572
+2016-07-24 17:52:26,109 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:52:26,109 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:52:26,109 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:54:26,008 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:54:26,008 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-24 17:54:26,008 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-30 18:51:15,259  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for progfun1-funsets, setting default to 2.11.
+2016-07-30 18:51:15,261  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.installation was uninitialized for progfun1-funsets, setting default to 2.11.
+2016-07-30 18:51:15,813 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-30 18:51:15,814 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-30 18:51:15,815 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-30 18:51:21,127  WARN [Worker-3] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-30 18:51:21,128  WARN [Worker-3] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-30 18:51:21,197  WARN [Worker-3] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-30 18:51:21,197  WARN [Worker-3] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-30 18:51:21,637  WARN [Worker-3] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-30 18:51:21,637  WARN [Worker-3] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-30 18:51:22,738  WARN [Java indexing] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-07-30 18:51:22,738  WARN [Java indexing] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-07-31 12:44:52,909  WARN [ModalContext] - ScalaProject - Project progfun1-objsets has platform default sourceLevel.
+2016-07-31 12:44:52,915  WARN [ModalContext] - ScalaProject - Project progfun1-objsets runs on platform default installation.
+2016-07-31 12:44:53,134  WARN [ModalContext] - ScalaProject - Project progfun1-objsets has platform default sourceLevel.
+2016-07-31 12:44:53,134  WARN [ModalContext] - ScalaProject - Project progfun1-objsets runs on platform default installation.
+2016-07-31 13:14:18,939 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 13:14:18,943 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 13:14:18,943 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 13:41:50,153 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 13:41:50,154 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 13:41:50,154 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 15:42:18,096 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 15:42:18,097 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 15:42:18,097 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 16:43:38,041 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 16:43:38,043 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 16:43:38,044 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 16:52:53,573 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 16:52:53,582 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 16:52:53,583 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 16:59:31,308 ERROR [Worker-145] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2016-07-31 16:59:31,308 ERROR [Worker-145] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2016-07-31 16:59:31,308 ERROR [Worker-145] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2016-07-31 21:51:03,925  WARN [ModalContext] - ScalaProject - Project progfun1-patmat has platform default sourceLevel.
+2016-07-31 21:51:03,929  WARN [ModalContext] - ScalaProject - Project progfun1-patmat runs on platform default installation.
+2016-07-31 21:51:04,076  WARN [ModalContext] - ScalaProject - Project progfun1-patmat has platform default sourceLevel.
+2016-07-31 21:51:04,076  WARN [ModalContext] - ScalaProject - Project progfun1-patmat runs on platform default installation.
+2016-07-31 21:54:44,366 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 21:54:44,503 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 21:54:44,503 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 21:54:44,503 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 22:05:30,692 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 22:05:30,692 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 22:05:30,693 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 22:45:40,704 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 22:45:40,939 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 22:45:40,939 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 22:45:40,939 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:10:52,907 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:10:52,910 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:10:52,910 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:11:11,633 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:11:11,634 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:11:11,634 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:14:58,585 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:14:58,586 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:14:58,587 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:17:03,338 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:17:03,338 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:17:03,338 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:22:11,918 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:22:11,921 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:22:11,921 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:24:16,881 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:24:16,882 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:24:16,882 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:27:16,217 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:27:16,238 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:30:11,435 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:30:11,435 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:30:11,435 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:40:10,965 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:40:10,966 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:40:10,966 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:40:25,146 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:40:25,147 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-07-31 23:40:25,147 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-05 18:00:26,904  WARN [main] - ScalaProject - Project Helloworld has platform default sourceLevel.
+2016-08-05 18:00:26,906  WARN [main] - ScalaProject - Project Helloworld runs on platform default installation.
+2016-08-05 18:00:30,112  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for progfun1-objsets, setting default to 2.11.
+2016-08-05 18:00:30,113  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.installation was uninitialized for progfun1-objsets, setting default to 2.11.
+2016-08-05 19:01:46,939  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2016-08-05 19:01:47,151  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2016-08-05 19:01:47,355  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2016-08-05 19:36:40,625 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-05 19:36:40,625 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-05 19:36:40,626 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-05 21:15:41,256 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-05 21:15:41,257 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-05 21:15:41,257 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-05 21:48:23,167 ERROR [Worker-104] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2016-08-05 21:48:23,167 ERROR [Worker-104] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2016-08-05 21:48:23,168 ERROR [Worker-104] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2016-08-07 21:38:14,323  WARN [ModalContext] - ScalaProject - Project progfun1-forcomp has platform default sourceLevel.
+2016-08-07 21:38:14,326  WARN [ModalContext] - ScalaProject - Project progfun1-forcomp runs on platform default installation.
+2016-08-07 21:38:14,452  WARN [ModalContext] - ScalaProject - Project progfun1-forcomp has platform default sourceLevel.
+2016-08-07 21:38:14,452  WARN [ModalContext] - ScalaProject - Project progfun1-forcomp runs on platform default installation.
+2016-08-07 22:16:15,385 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:16:15,386 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:16:15,386 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:19:33,744 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:19:33,746 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:19:33,746 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:22:55,658 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:22:55,658 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:22:55,658 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:27:02,782  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4004
+2016-08-07 22:27:23,791  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4004
+2016-08-07 22:27:26,404  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4008
+2016-08-07 22:27:27,991  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4010
+2016-08-07 22:27:31,088  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4013
+2016-08-07 22:28:01,244  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4055
+2016-08-07 22:28:04,340  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4057
+2016-08-07 22:28:06,431  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4060
+2016-08-07 22:28:15,287  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4060
+2016-08-07 22:30:23,999  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4078
+2016-08-07 22:30:24,000  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4073
+2016-08-07 22:30:24,000  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4062
+2016-08-07 22:30:24,000  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4104
+2016-08-07 22:30:25,058 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:30:25,058 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:30:25,058 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:32:43,306 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:32:43,308 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:32:43,308 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:34:50,856 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:34:50,857 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:34:50,857 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:36:32,530  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4288
+2016-08-07 22:36:32,531  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 4288
+2016-08-07 22:36:37,620 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:36:37,621 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:36:37,621 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:46:16,896 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:46:16,897 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:46:16,897 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:56:52,525 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:56:52,527 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:56:52,527 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 22:59:13,785  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 7979
+2016-08-07 22:59:14,803  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 7979
+2016-08-07 22:59:36,514  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 7954
+2016-08-07 22:59:38,119  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 7954
+2016-08-07 22:59:58,219  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 7979
+2016-08-07 23:00:02,350 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 23:00:02,350 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2016-08-07 23:00:02,350 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException

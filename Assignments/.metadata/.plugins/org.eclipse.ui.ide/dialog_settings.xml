@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/hgurram/Documents/Personal/Coursera/Certifications/Scala/Assignments/Week6"/>
+			<item value="/Users/hgurram/Documents/Personal/Coursera/Certifications/Scala/Assignments/Week4"/>
+			<item value="/Users/hgurram/Documents/Personal/Coursera/Certifications/Scala/Assignments/Week3/objsets"/>
+			<item value="/Users/hgurram/Documents/Personal/Coursera/Certifications/Scala/Assignments/Week2"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>
